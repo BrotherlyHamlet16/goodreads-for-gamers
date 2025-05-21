@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Game;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,10 @@ class UserGameListFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'game_id' => Game::factory(),
+            'status' => $this->faker->randomElement(['want_to_play', 'playing', 'completed', 'on_hold', 'dropped']),
+            'notes' => $this->faker->sentence,
         ];
     }
 }
