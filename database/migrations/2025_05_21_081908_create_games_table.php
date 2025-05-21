@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('cover_url')->nullable();
+            $table->date('release_date')->nullable();
+            $table->string('develoepr')->nullable();
+            $table->string('publisher')->nullable();
+            $table->text('summary')->nullable();
+            $table->unsignedBigInteger('igdb_id')->unique()->nullable();
             $table->timestamps();
         });
     }

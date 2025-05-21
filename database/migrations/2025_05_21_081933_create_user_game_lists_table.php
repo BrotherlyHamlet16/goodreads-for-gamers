@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('user_game_lists', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('game_id')->constrained()->onDelete('cascade');
+            $table->enum('status', ['want_to_play', 'playing', 'completed', 'on_hold', 'dropped'])->default('want_to_play');
+            $table->text('notes')->nullable();
             $table->timestamps();
+
+            $table->unique(['user_id', 'game_id']);
         });
     }
 
