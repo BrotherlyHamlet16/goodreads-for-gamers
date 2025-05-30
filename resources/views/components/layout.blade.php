@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayOn</title>
+    <title>Playerz</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -18,25 +18,18 @@
         </x-navbar>
     </div>
 
-    <div class="flex justify-between items-start p-4">
-        <section class="w-64 px-4 bg-amber-300 w-300px float-left ml-5px mr-5px mt-12px">
-            <section>Currently Playing</section>
-            <section>2025 Gamers Challenge</section>
-            <section>Want to Play</section>
-            <section>Shelves</section>
-        </section>
+    <main class="flex justify-between items-start p-4">
+        <x-homeSecondaryColumn>
+            {{ $slot }}
+        </x-homeSecondaryColumn>
 
-        <section class="flex-grow px-8 items-center bg-red-500 w-540px float-left mr-5px">
-            <div>Ths is a Banner</div>
-            <div>Updates</div>
-        </section>
+        <x-homePrimaryColumn>
+            {{$slot}}
+        </x-homePrimaryColumn>
 
-        <section class="w-300px px-4 bg-blue-600 float-right mr-5px mt-12px clear-none">
-            <div>Gaming News</div>
-            <div>Recommendations</div>
-            <div>Players Choice Awards</div>
-            <div>About Us Stuff</div>
-        </section>     
-    </div>
+        <x-homeTertiaryColumn>
+            {{ $slot }}
+        </x-homeTertiaryColumn>     
+    </main>
 </body>
 </html>
