@@ -19,19 +19,19 @@
     </div>
 
     <div class="flex justify-between items-start p-4">
-        <section class="w-64 px-4 bg-amber-300 w-300px float-left ml-5 mr-5">
-            <div>Currently Playing</div>
-            <div>2025 Gamers Challenge</div>
-            <div>Want to Play</div>
-            <div>Shelves</div>
+        <section class="w-64 px-4 bg-amber-300 w-300px float-left ml-5px mr-5px mt-12px">
+            <section>Currently Playing</section>
+            <section>2025 Gamers Challenge</section>
+            <section>Want to Play</section>
+            <section>Shelves</section>
         </section>
 
-        <section class="flex-grow px-8 items-center bg-red-500 w-540px float-left mr-5">
+        <section class="flex-grow px-8 items-center bg-red-500 w-540px float-left mr-5px">
             <div>Ths is a Banner</div>
             <div>Updates</div>
         </section>
 
-        <section class="w-300px px-4 bg-blue-600 float-right mr-5 mt-12px clear-none">
+        <section class="w-300px px-4 bg-blue-600 float-right mr-5px mt-12px clear-none">
             <div>Gaming News</div>
             <div>Recommendations</div>
             <div>Players Choice Awards</div>
