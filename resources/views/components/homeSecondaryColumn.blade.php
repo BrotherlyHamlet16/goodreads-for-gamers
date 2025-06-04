@@ -4,6 +4,10 @@
     </x-currently-playing>
     
     <section>2025 Gamers Challenge</section>
+    <x-game-challenge>
+
+    </x-game-challenge>
+    
     <section>Want to Play</section>
     <section>Shelves</section>
 </div>
